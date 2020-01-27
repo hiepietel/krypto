@@ -1,0 +1,593 @@
+<html><head>
+<title>RANDASK</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</head><body>
+<div id="content">
+<div id="header">
+<h1>RANDASK 1.0</h1>
+</div>
+<div id="input">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+    </div>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+    </div>
+  </div>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th scope="col" class="sm-3 md-3 lg-3">NIST</th>
+        <th scope="col">TEST01</th>
+        <th scope="col">ENT</th>
+        <th scope="col">DIEHARD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-frequency">
+            <label class="form-check-label" for="run-nist-frequency">
+              The Frequency (monobit) test
+            </label>
+          </div>
+
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-birthday-spacings">
+            <label class="form-check-label" for="run-diehard-birthday-spacings">
+              Birthday spacings
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-frequency-within-block">
+            <label class="form-check-label" for="run-nist-frequency-within-block">
+              Frequency Test within a Block
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-overlapping-permutations">
+            <label class="form-check-label" for="run-diehard-overlapping-permutations">
+              Overlapping permutations
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-runs-test">
+            <label class="form-check-label" for="run-nist-runs-test">
+              The Runs Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-ranks-of-matrices">
+            <label class="form-check-label" for="run-diehard-ranks-of-matrices">
+              Ranks of matrices
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-longest-1-run-within-block">
+            <label class="form-check-label" for="run-nist-longest-1-run-within-block">
+              Tests for the Longest-Run-of-Ones in a Block
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-monkey-tests">
+            <label class="form-check-label" for="run-diehard-monkey-tests">
+              Monkey tests
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-binary-matrix-rank-test">
+            <label class="form-check-label" for="run-nist-binary-matrix-rank-test">
+              The Binary Matrix Rank Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-count-the-1s">
+            <label class="form-check-label" for="run-diehard-conut-the-1s">
+              Count the 1s
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-spectral-test">
+            <label class="form-check-label" for="run-nist-spectral-test">
+              The Discrete Fourier Transform (Spectral) Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-parking-lot-test">
+            <label class="form-check-label" for="run-diehard-parking-lot-test">
+              Parking lot test
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-nonoverlapping-template-test">
+            <label class="form-check-label" for="run-nist-nonoverlapping-template-test">
+              The Non-overlapping Template Matching Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-minimum-distance-test">
+            <label class="form-check-label" for="run-diehard-minimum-distance-test">
+              Minimum distance test
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-overlapping-template-test">
+            <label class="form-check-label" for="run-nist-overlapping-template-test">
+              The Overlapping Template Matching Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-random-spheres-test">
+            <label class="form-check-label" for="run-diehard-random-spheres-test">
+              Random spheres test
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-universal-statistical-test">
+            <label class="form-check-label" for="run-nist-universal-statistical-test">
+              Maurer's "Universal Statistical" Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-squeeze-test">
+            <label class="form-check-label" for="run-diehard-squeeze-test">
+              The squeeze test
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-linear-complexity-test">
+            <label class="form-check-label" for="run-nist-linear-complexity-test">
+              The Linear Complexity Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-overlapping-sums-test">
+            <label class="form-check-label" for="run-diehard-overlapping-sums-test">
+              Overlapping sums test
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-serial-test">
+            <label class="form-check-label" for="run-nist-serial-test">
+              The Serial Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-runs-test">
+            <label class="form-check-label" for="run-diehard-runs-test">
+              Runs test
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-approximate-entropy-test">
+            <label class="form-check-label" for="run-nist-approximate-entropy-test">
+              The Approximate Entropy Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-diehard-craps-test">
+            <label class="form-check-label" for="run-diehard-craps-test">
+              The craps test
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-cumulative-sums-test">
+            <label class="form-check-label" for="run-nist-cumulative-sums-test">
+              The Cumulative Sums (Cusums) Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-random-excursions-test">
+            <label class="form-check-label" for="run-nist-random-excursions-test">
+              The Random Excursions Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="run-nist-random-excursions-variant-test">
+            <label class="form-check-label" for="run-nist-random-excursions-variant-test">
+              The Random Excursions Variant Test
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox test01
+            </label>
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Default checkbox ent
+            </label>
+          </div>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<button type="button" class="btn btn-primary btn-lg btn-block">Run selected tests</button>
+</div>
+<div id="status" hidden>
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">label</div>
+</div>
+</div>
+<div id="output">
+<div class="container">
+  <ul class="list-group">
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-2"></div>
+  <div class="col-9">Name Of Test</div>
+  <div class="col-1">STATUS</div>
+  </div></li>
+    <li class="list-group-item">
+        <div class="row">
+          <div class="col-2">
+          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Show output
+          </button>
+        </div>
+        <div class="col-9">Test Name</div>
+        <div class="col-1"><span class="badge badge-pill badge-success">OK</span></div>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      </div>
+    </div>
+  </li>
+
+  </ul>
+  </div>
+</div>
+</div>
+</div>
+<div id="footer">
+RANDASK 1.0 system made by Piotr Terczyński on May 2019
+</div>
+</body>
+</html>

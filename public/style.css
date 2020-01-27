@@ -1,0 +1,25 @@
+body,html{
+background-color: #fff;
+//color: grey;
+padding: 0;
+margin: 0;
+height: 100%;
+}
+
+#content{
+background-color: #eee;
+padding: 0px 50px;
+width: 80%;
+margin: 0px auto;
+min-height: 100%;
+padding-bottom: 80px;
+}
+
+#footer{
+background-color: #222;
+color: grey;
+font-size: small;
+padding: 30px 200px;
+margin-top: -80px;
+height: 20px;
+}

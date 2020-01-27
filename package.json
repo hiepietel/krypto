@@ -1,0 +1,16 @@
+{
+  "name": "RandAsk",
+  "version": "1.0.0",
+  "description": "Test for randomness runner",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Piotr Terczyński",
+  "license": "ISC",
+  "dependencies": {
+    "core-util-is": "^1.0.2",
+    "express": "^4.17.1"
+  }
+}

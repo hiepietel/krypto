@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>RANDASK</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="tests.js"></script>
+<script src="script.js"></script>
+</head><body onload="initialize();">
+<div id="content" width="80%" margin="auto">
+<div id="container">
+<div id="header">
+<h1>RANDASK 1.0</h1>
+</div>
+<div id="input">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+    </div>
+    <div class="custom-file">
+      <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-3"><h4>NIST</h4></div>
+    <div class="col-3"><h4>TEST01</h4></div>
+    <div class="col-3"><h4>ENT</h4></div>
+    <div class="col-3"><h4>DIEHARD</h4></div>
+  </div>
+  <div class="row">
+    <div class="col-3" id="check-nist"></div>
+    <div class="col-3" id="check-test01"></div>
+    <div class="col-3" id="check-ent"></div>
+    <div class="col-3" id="check-diehard"></div>
+  </div>
+<div style="margin: 20px;">
+<button type="button" class="btn btn-primary btn-lg btn-block" onclick="startTests();" id="button-test-launch">Run selected tests</button>
+</div>
+</div>
+<div id="status" hidden>
+  <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" style="width: 0%" id="test-progress">label</div>
+</div>
+</div>
+
+<div id="output" style="margin: 20px;">
+<div class="container">
+  <ul class="list-group">
+<li class="list-group-item">
+  <div class="row">
+    <div class="col-2"></div>
+  <div class="col-9">Name Of Test</div>
+  <div class="col-1">STATUS</div>
+  </div>
+</li>
+  <div id="output-list">
+  </div>
+</ul>
+</div>
+</div>
+
+</div>
+</body>
+</html>
