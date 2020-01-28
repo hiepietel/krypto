@@ -48,5 +48,10 @@ tests=[
   new Test("diehard","squeeze-test","The squeeze test"),
   new Test("diehard","overlapping-sums-test","Overlapping sums test"),
   new Test("diehard","runs-test","Runs test"),
-  new Test("diehard","craps-test","The craps test")
+  new Test("diehard","craps-test","The craps test"),
+  new Test("ent", "input-is-stream-byte-test","The input is treated as a stream of bits rather than of 8-bit bytes"),
+  new Test("ent", "occurences-count-test","Print a table of the number of occurrences of each possible byte"),
+  new Test("ent", "upper-to-lower-test","Fold upper case letters to lower case before computing statistics"),
+  new Test("ent", "csv-output-test","Terse mode: output is written in Comma Separated Value (CSV) format"),
+  new Test("ent", "help-test","Print how-to-call information")
 ];

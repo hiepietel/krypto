@@ -44,11 +44,16 @@ DIEHARD.set("squeeze-test","diehard -f {file}");
 DIEHARD.set("overlapping-sums-test","diehard -f {file}");
 DIEHARD.set("runs-test","diehard -f {file}");
 DIEHARD.set("craps-test","diehard -f {file}");
-
+ENT = new Map();
+ENT.set("input-is-stream-byte-test", "ent -b {file}");
+ENT.set("occurences-count-test","ent -c {file}" );
+ENT.set("upper-to-lower-test", "ent -f {file}");
+ENT.set("csv-output-test", "ent -t {file}");
+ENT.set("help-test", "ent -u {file}");
 
 
 app.use('/',express.static('public'));
-
+console.log("ASD");
 app.use('/run/:soft/:test/:file', function(req, res){
   var msg = "Running "+ req.params.soft + " with test " + req.params.test + " on file " + req.params.file;
   console.log(msg);
@@ -60,6 +65,8 @@ app.use('/run/:soft/:test/:file', function(req, res){
     cmd = NIST.get(test.test);
   }else if(test.soft=="diehard"){
     cmd = DIEHARD.get(test.test);
+  }else if(test.soft="ent"){
+    cmd = ENT.get(test.test);
   }
 
   cmd.replace("{file}",req.params.file);
