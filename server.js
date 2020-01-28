@@ -68,7 +68,7 @@ app.use('/run/:soft/:test/:file', function(req, res){
     cmd = ENT.get(test.test);
   }
   console.log(req.params.file);
-  cmd.replace("testdata.txt",req.params.file);
+  cmd.replace("{file}",req.params.file);
 
   exec(cmd, (err, stdout, stderr) => {
 	test.output=stderr+stdout;
