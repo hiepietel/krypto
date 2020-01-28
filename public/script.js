@@ -68,7 +68,9 @@ function testResultUpdate(responseTest){
 
 function runTest(test){
   document.getElementById(Test.statusClassId(test)).innerHTML = "<span class=\"badge badge-pill badge-primary\">RUNNING</span>";
-  file = "file.txt"
+  var file = document.getElementById("inputfilename").value;
+  document.getElementById("inputfilename").innerText = "";
+  console.log(file);
   var xhttp = new XMLHttpRequest();
   xhttp.onload = function() {testResultUpdate(JSON.parse(this.responseText));};
   xhttp.open("GET", "run/"+test.soft+"/"+test.test+"/"+file,true);

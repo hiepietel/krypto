@@ -53,7 +53,6 @@ ENT.set("help-test", "ent -u {file}");
 
 
 app.use('/',express.static('public'));
-console.log("ASD");
 app.use('/run/:soft/:test/:file', function(req, res){
   var msg = "Running "+ req.params.soft + " with test " + req.params.test + " on file " + req.params.file;
   console.log(msg);
@@ -68,8 +67,8 @@ app.use('/run/:soft/:test/:file', function(req, res){
   }else if(test.soft="ent"){
     cmd = ENT.get(test.test);
   }
-
-  cmd.replace("{file}",req.params.file);
+  console.log(req.params.file);
+  cmd.replace("testdata.txt",req.params.file);
 
   exec(cmd, (err, stdout, stderr) => {
 	test.output=stderr+stdout;
