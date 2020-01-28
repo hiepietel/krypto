@@ -32,18 +32,18 @@ NIST.set("cumulative-sums-test","nist -f {file}");
 NIST.set("random-exvursions-test","nist -f {file}");
 NIST.set("random-excursions-variant-test","nist -f {file}");
 DIEHARD = new Map();
-DIEHARD.set("birthday-spacings-test","diehard -f {file}");
-DIEHARD.set("overlapping-permutations-test","diehard -f {file}");
-DIEHARD.set("ranks-of-matrices-test","diehard -f {file}");
-DIEHARD.set("monkey-test","diehard -f {file}");
-DIEHARD.set("count-1s-test","diehard -f {file}");
-DIEHARD.set("parking-lot-test","diehard -f {file}");
-DIEHARD.set("minimum-distance-test","diehard -f {file}");
-DIEHARD.set("random-spheres-test","diehard -f {file}");
-DIEHARD.set("squeeze-test","diehard -f {file}");
-DIEHARD.set("overlapping-sums-test","diehard -f {file}");
-DIEHARD.set("runs-test","diehard -f {file}");
-DIEHARD.set("craps-test","diehard -f {file}");
+DIEHARD.set("birthday-spacings-test",			"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 0");
+DIEHARD.set("overlapping-permutations-test",	"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 1");
+DIEHARD.set("ranks-of-matrices-test",			"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 2");
+DIEHARD.set("monkey-test",						"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 4");
+DIEHARD.set("count-1s-test",					"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 8");
+DIEHARD.set("parking-lot-test",					"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 10");
+DIEHARD.set("minimum-distance-test",			"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 11");
+DIEHARD.set("random-spheres-test",				"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 12");
+DIEHARD.set("squeeze-test",						"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 13");
+DIEHARD.set("overlapping-sums-test",			"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 14");
+DIEHARD.set("runs-test",						"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 15");
+DIEHARD.set("craps-test",						"LD_LIBRARY_PATH=lib bin/dieharder -f {file} -d 16");
 ENT = new Map();
 ENT.set("input-is-stream-byte-test", "ent -b {file}");
 ENT.set("occurences-count-test","ent -c {file}" );
@@ -68,7 +68,7 @@ app.use('/run/:soft/:test/:file', function(req, res){
     cmd = ENT.get(test.test);
   }
   console.log(req.params.file);
-  cmd.replace("testdata.txt",req.params.file);
+  cmd.replace("{file}",req.params.file);
 
   exec(cmd, (err, stdout, stderr) => {
 	test.output=stderr+stdout;
